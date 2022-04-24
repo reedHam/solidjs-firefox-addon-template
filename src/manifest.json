@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "version": "1.0",
+    "name": "Absolute Annals",
+    "author": "absolute-annals",
+    "description": "Tools for collecting metadata from the web.",
+    "background": {
+        "scripts": ["background/background.ts"]
+    },
+    "browser_action": {
+        "default_icon": {
+            "16": "assets/icon_16.png",
+            "32": "assets/icon_32.png",
+            "48": "assets/icon_48.png",
+            "128": "assets/icon_128.png"
+        },
+        "default_title": "Absolute Annals",
+        "default_popup": "popup/popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*.youtube.com/*"],
+            "js": ["scripts/youtube.ts"]
+        }
+    ]
+}
