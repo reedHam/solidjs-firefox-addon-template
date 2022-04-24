@@ -17,7 +17,7 @@ export default defineConfig({
     }),
   ],
   build: {
-    outDir: path.resolve(__dirname, "build"),
+    outDir: path.resolve(__dirname, "build/dist"),
     target: 'esnext',
     polyfillDynamicImport: false,
     emptyOutDir: true,
