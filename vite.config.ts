@@ -17,6 +17,7 @@ export default defineConfig({
     }),
   ],
   build: {
+    minify: 'terser',
     outDir: path.resolve(__dirname, "build/dist"),
     target: 'esnext',
     polyfillDynamicImport: false,

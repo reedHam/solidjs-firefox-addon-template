@@ -5,7 +5,7 @@
   "scripts": {
     "start": "vite",
     "dev": "vite",
-    "build": "vite build && web-ext build --overwrite-dest -s ./build/dist -a ./build/ && cp ./build/*.zip /mnt/e/extensions/",
+    "build": "vite build && web-ext build --overwrite-dest -s ./build/dist -a ./build/ && cp -f ./build/*.zip /mnt/e/extensions/",
     "sign": "web-ext sign --api-key $(grep WEB_EXT_API_KEY .env | cut -d '=' -f2) --api-secret $(grep WEB_EXT_API_SECRET .env | cut -d '=' -f2) -s ./build/dist -a ./build/",
     "serve": "vite preview"
   },
